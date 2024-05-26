@@ -1,22 +1,22 @@
-// src/App.js
 import React from 'react';
-import Product from './components/product';
+import Products from './components/product';
 import Cart from './components/cart';
+import Invoice from './components/invoice';
+import './App.css';
 
 const App = () => {
-    const sampleProduct = {
-        id: 1,
-        name: 'Sample Product',
-        price: '$10'
-    };
-
-    return (
-        <div>
-            <h1>Shopping Cart</h1>
-            <Product product={sampleProduct} />
-            <Cart />
-        </div>
-    );
+  return (
+    <div className="container">
+      <header className="header">
+        <h1>Online Store</h1>
+      </header>
+      <main className="main-content">
+        <Products />
+        <Cart />
+        <Invoice />
+      </main>
+    </div>
+  );
 };
 
 export default App;
